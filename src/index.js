@@ -1,17 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+
+//ReactDOM is a JavaScript library that provides methods for working with the DOM (Document Object Model) in React applications. It serves as the entry point to the React library for web applications, allowing developers to render React components into the DOM and manage their lifecycle.
+import {createRoot} from 'react-dom/client';
+
+
+//This would be the main component of this react project
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//We need the ReactDOM to get two things, first would be the APP.js file, and whole of our DOM would be contained inside the id="root" which is present inside the index.html in public folder (The one shown to the user)
+createRoot(document.getElementById('root')).render(<App />);
